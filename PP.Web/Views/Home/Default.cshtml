@@ -2,6 +2,167 @@
 @{
     ViewBag.Title = "Default";
 }
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
 
-<h2>Default</h2>
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Css/sidebars.css" rel="stylesheet">
+    <link href="~/Content/Css/carousel.css" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            min-width: 200px;
+            position: absolute;
+            inset: auto auto 0px 0px;
+            margin: 0px;
+            left: unset;
+            right: -218px;
+            z-index: 100;
+            opacity: 1;
+            transform: translate3d(250px, 0px, 0px);
+        }
+    </style>
+</head>
+<body>
+    <div style="padding-top: 20px; display:flex;">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; border-radius: 0.8rem">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="dropdown dropend">
+                    <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
+                        Home
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropend">
+                    <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
+                        Dashboard
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropend">
+                    <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
+                        Orders
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropend">
+                    <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
+                        Products
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropend">
+                    <a href="#" id="dropdownUser1" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
+                        Customers
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div style="display:block; width:100%; padding: 0 10px 0 10px">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+
+                        <div class="container">
+                            <div class="carousel-caption text-start">
+                                <h1>Example headline.</h1>
+                                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Another example headline.</h1>
+                                <p>Some representative placeholder content for the second slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>One more for good measure.</h1>
+                                <p>Some representative placeholder content for the third slide of this carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 

@@ -26,5 +26,11 @@ namespace PP.Web.Controllers
 
             return View();
         }
+        public ActionResult Default()
+        {
+            ViewBag.Message = "Your Default page.";
+
+            return View();
+        }
     }
 }
