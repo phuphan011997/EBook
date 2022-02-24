@@ -10,158 +10,415 @@
     <meta name="description" content="">
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
     <!-- Bootstrap core CSS -->
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/Css/sidebars.css" rel="stylesheet">
     <link href="~/Content/Css/carousel.css" rel="stylesheet">
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        .dropdown:hover .dropdown-menu {
-            display: block;
-            min-width: 200px;
-            position: absolute;
-            inset: auto auto 0px 0px;
-            margin: 0px;
-            left: unset;
-            right: -218px;
-            z-index: 100;
-            opacity: 1;
-            transform: translate3d(250px, 0px, 0px);
-        }
-    </style>
+    <link href="~/Content/Css/Default.css" rel="stylesheet">
+    <link href="~/Content/Site.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <div style="padding-top: 20px; display:flex;">
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; border-radius: 0.8rem">
-            <ul class="nav nav-pills flex-column mb-auto">
-                <li class="dropdown dropend">
-                    <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
-                        Home
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown dropend">
-                    <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
-                        Dashboard
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown dropend">
-                    <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
-                        Orders
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown dropend">
-                    <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
-                        Products
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown dropend">
-                    <a href="#" id="dropdownUser1" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
-                        Customers
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </li>
-            </ul>
+    <div class="container col-10">
+        <div style="padding-top: 20px; display:flex;">
+            <!-- #region Left Menu -->
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; border-radius: 0.8rem">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="dropdown dropend">
+                        <a href="#" class="nav-link text-white dropdown-toggle" aria-expanded="false">
+                            <i class="bi bi-phone"></i>
+                            Smartphone
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropend">
+                        <a href="#" class="nav-link text-white dropdown-toggle" aria-expanded="false">
+                            <i class="bi bi-laptop"></i>
+                            Laptop, PC
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropend">
+                        <a href="#" class="nav-link text-white dropdown-toggle" aria-expanded="false">
+                            <i class="bi bi-watch"></i>
+                            Watch
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropend">
+                        <a href="#" class="nav-link text-white dropdown-toggle" aria-expanded="false">
+                            <i class="bi bi-tv"></i>
+                            Tivi
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropend">
+                        <a href="#" id="dropdownUser1" class="nav-link text-white dropdown-toggle" aria-expanded="false">
+                            <i class="bi bi-egg"></i>
+                            Food
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="min-width:200px" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">New projecaaaaaNew projecaaaaatNew projecaaaaatNew projecaaaaatt...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- #endregion -->
+            <!-- #region Carousel Advertisement -->
+            <div style="display:block; width:100%; margin-left: 10px;">
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+                            <img src="~/Content/Images/Slide1.jpg" class="d-block w-100">
+                            <div class="container">
+                                <div class="carousel-caption text-start">
+                                    <h1>Example headline.</h1>
+                                    <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+                            <img src="~/Content/Images/Slide2.jpg" class="d-block w-100">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>Another example headline.</h1>
+                                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+                            <img src="~/Content/Images/Slide1.jpg" class="d-block w-100">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>One more for good measure.</h1>
+                                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+                            <img src="~/Content/Images/Slide2.jpg" class="d-block w-100">
+                            <div class="container">
+                                <div class="carousel-caption text-end">
+                                    <h1>One more for good measure Slide 4.</h1>
+                                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- #endregion -->
         </div>
-
-        <div style="display:block; width:100%; padding: 0 10px 0 10px">
-            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <!-- #region Promotion -->
+        <div class="promotion">
+            <div id="childPromotion-banner" class="row">
+                <div class="col-sm-4" style="text-align: left">
+                    <span class="text-white text-opacity-75 h1 fw-bold fst-italic " style="text-shadow: #f54e31 5px -2px 10px; ">HOTSALE</span>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
-
-                        <div class="container">
-                            <div class="carousel-caption text-start">
-                                <h1>Example headline.</h1>
-                                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-                            </div>
+                <div id="clock-c" class="countdown py-4 text-white-50 col-sm-8"></div>
+            </div>
+            <div class="slider">
+                <div class="item-product">
+                    <div class="item-product-stickerPercent"><span class="item-product-white align-middle">Discount 5%</span></div>
+                    <a href="#" class="text-decoration-none" style="color:inherit">
+                        <div class="img-item-product">
+                            <img class="img-fluid" src="https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg">
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
-
-                        <div class="container">
-                            <div class="carousel-caption">
-                                <h1>Another example headline.</h1>
-                                <p>Some representative placeholder content for the second slide of the carousel.</p>
-                                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                            </div>
+                        <p id="name-product" style="margin-bottom: 0;" class="text-start fw-normal">iPhone 13 Pro Max Pro Max 128GB</p>
+                        <div id="price" style="text-align:left">
+                            <p id="price-new-product" style="display: inline; color: red; font-family: sans-serif;" class="text-start fw-bold fs-6">1.111.111&nbsp;₫</p>
+                            <p id="price-old-product" style="display: inline; margin-left:15px; font-size:13px;" class="text-start text-decoration-line-through fw-light">99.999.999&nbsp;₫</p>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+                        <div class="item-product-description-box">
+                            <p class="item-product-description">This is some text within a card body This is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card body.</p>
 
-                        <div class="container">
-                            <div class="carousel-caption text-end">
-                                <h1>One more for good measure.</h1>
-                                <p>Some representative placeholder content for the third slide of this carousel.</p>
-                                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                            </div>
                         </div>
-                    </div>
+
+                    </a>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
+                <div class="item-product">
+                    <div class="item-product-stickerPercent"><span class="item-product-white align-middle">Discount 5%</span></div>
+                    <a href="#" class="text-decoration-none" style="color:inherit">
+                        <div class="img-item-product">
+                            <img class="img-fluid" src="https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg">
+                        </div>
+                        <p id="name-product" style="margin-bottom: 0;" class="text-start fw-normal">iPhone 13 Pro Max Pro Max 128GB</p>
+                        <div id="price" style="text-align:left">
+                            <p id="price-new-product" style="display: inline; color: red; font-family: sans-serif;" class="text-start fw-bold fs-6">1.111.111&nbsp;₫</p>
+                            <p id="price-old-product" style="display: inline; margin-left:15px; font-size:13px;" class="text-start text-decoration-line-through fw-light">99.999.999&nbsp;₫</p>
+                        </div>
+                        <div class="description-box">
+                            <p class="description">This is some text within a card body.</p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="item-product"><h4>your content3</h4></div>
+                <div class="item-product"><h4>your content4</h4></div>
+                <div class="item-product"><h4>your content5</h4></div>
+                <div class="item-product"><h4>your content6</h4></div>
+                <div class="item-product"><h4>your content7</h4></div>
+                <div class="item-product"><h4>your content8</h4></div>
+                <div class="item-product"><h4>your content9</h4></div>
+                <div class="item-product"><h4>your content10</h4></div>
             </div>
         </div>
+        <!-- #endregion -->
+
+        <div>
+            <div id="box-title" style="display:flex" class="row-cols-6">
+                <div class="col-3">
+                    <a href="#" class="text-start text-color-none">FEATURED</a>
+                </div>
+                <div class="col-9" style="text-align:right">
+                    <a class="btn btn-secondary box-related-featured">Related 1</a>
+                    <a class="btn btn-secondary box-related-featured">Related 2</a>
+                    <a class="btn btn-secondary box-related-featured">Related 3</a>
+                    <a class="btn btn-secondary box-related-featured">Related 4</a>
+                    <a class="btn btn-secondary box-related-featured">Related 5</a>
+                </div>
+            </div>
+            <div id="product-feature-list" style="display: flex; margin-top: 10px; " class=" row-cols-md-5 row">
+
+                <div class="item-product item-product-main col-1">
+                    <div class="item-product-stickerPercent"><span class="item-product-white align-middle align-content-lg-between">Discount 5%</span></div>
+                    <a href="#" class="text-decoration-none text-color-none">
+                        <div class="img-item-product">
+                            <img class="img-fluid" src="https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg">
+                        </div>
+                        <p id="name-product" style="margin-bottom: 0;" class="text-start fw-normal">iPhone 13 Pro Max Pro Max 128GB</p>
+                        <div id="price" style="text-align:left">
+                            <p id="price-new-product" style="display: inline; color: red; font-family: sans-serif;" class="text-start fw-bold fs-6">1.111.111&nbsp;₫</p>
+                            <p id="price-old-product" style="display: inline; margin-left:15px; font-size:13px;" class="text-start text-decoration-line-through fw-light">99.999.999&nbsp;₫</p>
+                        </div>
+                        <div class="item-product-description-box">
+                            <p class="item-product-description">This is some text within a card body This is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card body.</p>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item-product item-product-main col-1">
+                    <div class="item-product-stickerPercent"><span class="item-product-white align-middle">Discount 5%</span></div>
+                    <a href="#" class="text-decoration-none text-color-none">
+                        <div class="img-item-product">
+                            <img class="img-fluid" src="https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg">
+                        </div>
+                        <p id="name-product" style="margin-bottom: 0;" class="text-start fw-normal">iPhone 13 Pro Max Pro Max 128GB</p>
+                        <div id="price" style="text-align:left">
+                            <p id="price-new-product" style="display: inline; color: red; font-family: sans-serif;" class="text-start fw-bold fs-6">1.111.111&nbsp;₫</p>
+                            <p id="price-old-product" style="display: inline; margin-left:15px; font-size:13px;" class="text-start text-decoration-line-through fw-light">99.999.999&nbsp;₫</p>
+                        </div>
+                        <div class="item-product-description-box">
+                            <p class="item-product-description">This is some text within a card body This is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card body.</p>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item-product item-product-main col-1">
+                    <div class="item-product-stickerPercent"><span class="item-product-white align-middle">Discount 5%</span></div>
+                    <a href="#" class="text-decoration-none text-color-none">
+                        <div class="img-item-product">
+                            <img class="img-fluid" src="https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg">
+                        </div>
+                        <p id="name-product" style="margin-bottom: 0;" class="text-start fw-normal">iPhone 13 Pro Max Pro Max 128GB</p>
+                        <div id="price" style="text-align:left">
+                            <p id="price-new-product" style="display: inline; color: red; font-family: sans-serif;" class="text-start fw-bold fs-6">1.111.111&nbsp;₫</p>
+                            <p id="price-old-product" style="display: inline; margin-left:15px; font-size:13px;" class="text-start text-decoration-line-through fw-light">99.999.999&nbsp;₫</p>
+                        </div>
+                        <div class="item-product-description-box">
+                            <p class="item-product-description">This is some text within a card body This is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card body.</p>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item-product item-product-main col-1">
+                    <div class="item-product-stickerPercent"><span class="item-product-white align-middle">Discount 5%</span></div>
+                    <a href="#" class="text-decoration-none text-color-none">
+                        <div class="img-item-product">
+                            <img class="img-fluid" src="https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg">
+                        </div>
+                        <p id="name-product" style="margin-bottom: 0;" class="text-start fw-normal">iPhone 13 Pro Max Pro Max 128GB</p>
+                        <div id="price" style="text-align:left">
+                            <p id="price-new-product" style="display: inline; color: red; font-family: sans-serif;" class="text-start fw-bold fs-6">1.111.111&nbsp;₫</p>
+                            <p id="price-old-product" style="display: inline; margin-left:15px; font-size:13px;" class="text-start text-decoration-line-through fw-light">99.999.999&nbsp;₫</p>
+                        </div>
+                        <div class="item-product-description-box">
+                            <p class="item-product-description">This is some text within a card body This is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card body.</p>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item-product item-product-main col-1">
+                    <div class="item-product-stickerPercent"><span class="item-product-white align-middle">Discount 5%</span></div>
+                    <a href="#" class="text-decoration-none text-color-none">
+                        <div class="img-item-product">
+                            <img class="img-fluid" src="https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg">
+                        </div>
+                        <p id="name-product" style="margin-bottom: 0;" class="text-start fw-normal">iPhone 13 Pro Max Pro Max 128GB</p>
+                        <div id="price" style="text-align:left">
+                            <p id="price-new-product" style="display: inline; color: red; font-family: sans-serif;" class="text-start fw-bold fs-6">1.111.111&nbsp;₫</p>
+                            <p id="price-old-product" style="display: inline; margin-left:15px; font-size:13px;" class="text-start text-decoration-line-through fw-light">99.999.999&nbsp;₫</p>
+                        </div>
+                        <div class="item-product-description-box">
+                            <p class="item-product-description">This is some text within a card body This is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card body.</p>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item-product item-product-main col-1">
+                    <div class="item-product-stickerPercent"><span class="item-product-white align-middle">Discount 5%</span></div>
+                    <a href="#" class="text-decoration-none text-color-none">
+                        <div class="img-item-product">
+                            <img class="img-fluid" src="https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg">
+                        </div>
+                        <p id="name-product" style="margin-bottom: 0;" class="text-start fw-normal">iPhone 13 Pro Max Pro Max 128GB</p>
+                        <div id="price" style="text-align:left">
+                            <p id="price-new-product" style="display: inline; color: red; font-family: sans-serif;" class="text-start fw-bold fs-6">1.111.111&nbsp;₫</p>
+                            <p id="price-old-product" style="display: inline; margin-left:15px; font-size:13px;" class="text-start text-decoration-line-through fw-light">99.999.999&nbsp;₫</p>
+                        </div>
+                        <div class="item-product-description-box">
+                            <p class="item-product-description">This is some text within a card body This is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card body.</p>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item-product item-product-main col-1">
+                    <div class="item-product-stickerPercent"><span class="item-product-white align-middle">Discount 5%</span></div>
+                    <a href="#" class="text-decoration-none text-color-none">
+                        <div class="img-item-product">
+                            <img class="img-fluid" src="https://image.cellphones.com.vn/220x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg">
+                        </div>
+                        <p id="name-product" style="margin-bottom: 0;" class="text-start fw-normal">iPhone 13 Pro Max Pro Max 128GB</p>
+                        <div id="price" style="text-align:left">
+                            <p id="price-new-product" style="display: inline; color: red; font-family: sans-serif;" class="text-start fw-bold fs-6">1.111.111&nbsp;₫</p>
+                            <p id="price-old-product" style="display: inline; margin-left:15px; font-size:13px;" class="text-start text-decoration-line-through fw-light">99.999.999&nbsp;₫</p>
+                        </div>
+                        <div class="item-product-description-box">
+                            <p class="item-product-description">This is some text within a card body This is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card bodyThis is some text within a card body.</p>
+
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
     </div>
+
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $('.slider').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
+    <script src="~/Scripts/jquery.countdown.js"></script>
+    <script type="text/javascript">
+        function get15dayFromNow() {
+            return new Date(new Date().valueOf() + 15 * 24 * 60 * 60 * 1000);
+        }
+
+        $("#clock-c")
+            .countdown(get15dayFromNow(), function (event) {
+                var $this = $(this).html(event.strftime(''
+                    + '<span class="h1 font-weight-bold">%D</span> Day%!d'
+                    + '<span class="h1 font-weight-bold">%H</span> Hr'
+                    + '<span class="h1 font-weight-bold">%M</span> Min'
+                    + '<span class="h1 font-weight-bold">%S</span> Sec'));
+            });
+    </script>
 </body>
 </html>
 
